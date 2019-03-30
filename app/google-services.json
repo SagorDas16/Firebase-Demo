@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "634750832765-oreo4u5htkkeqm5c74lgo57jll6nir9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasepreoject",
+            "certificate_hash": "ec8c672ef3f0d006a3200af219506bce115d3134"
+          }
+        },
+        {
           "client_id": "634750832765-3hupcmivr0pt0v6osda1jbs6crjsocrm.apps.googleusercontent.com",
           "client_type": 3
         }

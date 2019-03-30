@@ -2,18 +2,33 @@ package com.example.firebasepreoject;
 
 public class Model {
 
-    String title, image, description;
+    String image, price, name, location;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     public Model(){}
 
-    public String getTitle() {
-        return title;
+    public String getPrice() {
+        return price;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setPrice(String price) {
+        this.price = price;
     }
-
     public String getImage() {
         return image;
     }
@@ -22,11 +37,5 @@ public class Model {
         this.image = image;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

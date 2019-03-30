@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Firebase Preoject</string>
+
+    <string name="destination">Search your destination</string>
+
+    <string-array name="district_name">
+        <item>Bagerhat</item>
+        <item>Dhaka</item>
+        <item>Jashore</item>
+        <item>Khulna</item>
+        <item>Kushtia</item>
+        <item>Satkhira</item>
+
+    </string-array>
 </resources>
