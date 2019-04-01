@@ -18,8 +18,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         mView = itemView;
 
-        /*
-        //item click
+
+        //item click ->
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,13 +33,14 @@ public class ViewHolder extends RecyclerView.ViewHolder {
                 mClickListener.onItemLongClick(view, getAdapterPosition());
                 return true;
             }
-        });*/
+        });
+        //itemclick <-
 
     }
     public void setDetails(Context ctx,String name, String location, String image, String price){
 
-        TextView mnameTv = mView.findViewById(R.id.rTitleTv);
-        TextView mlocationTv = mView.findViewById(R.id.rDescriptionTv);
+        TextView mnameTv = mView.findViewById(R.id.rnameTv);
+        TextView mlocationTv = mView.findViewById(R.id.rlocationTv);
         TextView mPriceTv = mView.findViewById(R.id.rPriceTv);
         ImageView mImageTv = mView.findViewById(R.id.rImageView);
 
@@ -50,7 +51,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
 
     }
-    /*private ViewHolder.ClickListener mClickListener;
+    //itemclick ->
+    private ViewHolder.ClickListener mClickListener;
 
     public interface ClickListener{
         void onItemClik(View view,int position);
@@ -58,6 +60,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     }
     public void setOnClickListener(ViewHolder.ClickListener clickListener){
         mClickListener = clickListener;
-    }*/
+    }
+    //itemclick <-
 
 }

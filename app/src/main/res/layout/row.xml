@@ -26,7 +26,7 @@
 
             />
         <TextView
-            android:id="@+id/rTitleTv"
+            android:id="@+id/rnameTv"
             android:textSize="22sp"
             android:textColor="#000"
             android:text="Title"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/rDescriptionTv"
+            android:id="@+id/rlocationTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="This will be the description of post"

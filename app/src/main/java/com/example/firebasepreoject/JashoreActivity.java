@@ -1,14 +1,24 @@
 package com.example.firebasepreoject;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.ByteArrayOutputStream;
 
 public class JashoreActivity extends AppCompatActivity {
 
@@ -52,7 +62,7 @@ public class JashoreActivity extends AppCompatActivity {
                         viewHolder.setDetails(getApplicationContext(),model.getName(), model.getLocation(),model.getImage(),model.getPrice());
                     }
 
-                    /*//ssssss
+                    //itemclick ->
 
                     @Override
                     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -61,25 +71,24 @@ public class JashoreActivity extends AppCompatActivity {
                         viewHolder.setOnClickListener(new ViewHolder.ClickListener() {
                             @Override
                             public void onItemClik(View view, int position) {
-                                TextView mnameTv = view.findViewById(R.id.rTitleTv);
-                                TextView mlocationTv = view.findViewById(R.id.rDescriptionTv);
-                                TextView mPriceTv = view.findViewById(R.id.rPriceTv);
-                                ImageView mImageview = view.findViewById(R.id.rImageView);
 
-                                String mname = mnameTv.getText().toString();
-                                String mlocation = mlocationTv.getText().toString();
-                                String mprice = mPriceTv.getText().toString();
-                                Drawable mDrawable = mImageview.getDrawable();
-                                Bitmap mBitmap = ((BitmapDrawable)mDrawable).getBitmap();
+
+                                String mname = getItem(position).getName();
+                                String mlocation = getItem(position).getLocation();
+                                String mprice = getItem(position).getPrice();
+                                String mimage = getItem(position).getImage();
+                                String mnumber = getItem(position).getNumber();
+                                String mposition = getItem(position).getPosition();
 
                                 Intent intent = new Intent(view.getContext(), DetailsActivity.class);
-                                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                                mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                                byte[] bytes = stream.toByteArray();
-                                intent.putExtra("image", bytes);
+
                                 intent.putExtra("name", mname);
                                 intent.putExtra("location", mlocation);
                                 intent.putExtra("price", mprice);
+                                intent.putExtra("image", mimage);
+                                intent.putExtra("number", mnumber);
+                                intent.putExtra("position", mposition);
+
                                 startActivity(intent);
 
 
@@ -94,7 +103,7 @@ public class JashoreActivity extends AppCompatActivity {
                         return viewHolder;
                     }
 
-                    //ssssss*/
+                    //itemclick <-
                 };
 
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
