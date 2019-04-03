@@ -32,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         //itemclick->
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Details");
+        //actionBar.setTitle("Details");
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
@@ -50,6 +50,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         String price = getIntent().getStringExtra("price");
         number = getIntent().getStringExtra("number");
         position = getIntent().getStringExtra("position");
+
+        actionBar.setTitle(name);
 
         mnameTv.setText(name);
         mlocationTv.setText(location);
@@ -79,7 +81,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse(str));
             startActivity(intent);
-
         }
         if(v.getId() == R.id.mapbutton){
             Uri ref = Uri.parse(position);

@@ -31,9 +31,9 @@ public class JashoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jashore);
-
+        String ht = getIntent().getStringExtra("ht");
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Posts List");
+        actionBar.setTitle(ht);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);

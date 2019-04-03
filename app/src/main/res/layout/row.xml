@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/rImageView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="190dp"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:background="@drawable/loading"

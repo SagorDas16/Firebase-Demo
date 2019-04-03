@@ -8,13 +8,12 @@
     android:background="@drawable/gradient_2"
     tools:context=".SplashScreenActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hotel"
-        android:textStyle="bold"
-        android:textColor="#F3F2F2"
-        android:textSize="50sp"
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/icon_2"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         />
 
 </LinearLayout>
