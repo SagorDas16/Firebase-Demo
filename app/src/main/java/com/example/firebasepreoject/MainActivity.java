@@ -79,27 +79,32 @@ public class MainActivity extends AppCompatActivity {
                 String value = adapter.getItem(position);
                 if(value.equals("Bagerhat")) {
                     intent = new Intent(MainActivity.this,KhulnaActivity.class);
+                    intent.putExtra("location", "Bagerhat");
                     startActivity(intent);
                 }
                 if(value.equals("Dhaka")) {
                     intent = new Intent(MainActivity.this,KhulnaActivity.class);
+                    intent.putExtra("location", "Dhaka");
                     startActivity(intent);
                 }
                 if(value.equals("Jashore")) {
                     intent = new Intent(MainActivity.this,JashoreActivity.class);
-                    intent.putExtra("ht", "Jashore");
+                    intent.putExtra("location", "Jashore");
                     startActivity(intent);
                 }
                 if(value.equals("Khulna")) {
                     intent = new Intent(MainActivity.this,KhulnaActivity.class);
+                    intent.putExtra("location", "Khulna");
                     startActivity(intent);
                 }
                 if(value.equals("Kushtia")) {
                     intent = new Intent(MainActivity.this,KhulnaActivity.class);
+                    intent.putExtra("location", "Kushtia");
                     startActivity(intent);
                 }
                 if(value.equals("Satkhira")) {
                     intent = new Intent(MainActivity.this,KhulnaActivity.class);
+                    intent.putExtra("location", "Satkhira");
                     startActivity(intent);
                 }
             }

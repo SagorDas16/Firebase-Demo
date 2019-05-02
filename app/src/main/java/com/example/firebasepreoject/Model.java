@@ -2,7 +2,7 @@ package com.example.firebasepreoject;
 
 public class Model {
 
-    String image, price, name, location, number, position;
+    String image, price, name, location, number, position, id, rating;
 
     public Model(){}
 
@@ -55,5 +55,19 @@ public class Model {
         this.image = image;
     }
 
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 }

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KhulnaActivity"></activity>
+        <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".KhulnaActivity" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

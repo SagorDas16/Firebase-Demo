@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -37,17 +38,21 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         //itemclick <-
 
     }
-    public void setDetails(Context ctx,String name, String location, String image, String price){
+    public void setDetails(Context ctx,String name, String location, String image, String price, String rating){
 
         TextView mnameTv = mView.findViewById(R.id.rnameTv);
         TextView mlocationTv = mView.findViewById(R.id.rlocationTv);
         TextView mPriceTv = mView.findViewById(R.id.rPriceTv);
         ImageView mImageTv = mView.findViewById(R.id.rImageView);
+        RatingBar mratingTv = mView.findViewById(R.id.ratingBar);
+        double rat = Double.parseDouble(rating);
 
         mnameTv.setText(name);
+        mratingTv.setRating((float) rat);
         mlocationTv.setText(location);
         mPriceTv.setText(price);
         Picasso.get().load(image).into(mImageTv);
+
 
 
     }
